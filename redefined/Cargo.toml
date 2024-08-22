@@ -1,0 +1,17 @@
+[package]
+name = "redefined"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "redefined"
+
+[dependencies]
+# derive
+redefined-derive = { path = "../redefined-derive" }
+
+[features]
+default = ["unsafe", "remote"]
+unsafe = ["redefined-derive/unsafe"]
+remote = ["redefined-derive/remote"]
+
